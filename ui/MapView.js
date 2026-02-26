@@ -35,6 +35,62 @@ export class MapView {
       colors.purpleLight
     );
     
+    // How to Play section
+    const instructionsX = 400;
+    this.renderer.renderText(
+      '🎮 How to Play',
+      instructionsX, 80,
+      colors.purple,
+      'bold 20px "Courier New"'
+    );
+    
+    const instructions = [
+      '1. Click an establishment to view systems',
+      '2. Select a system to see bugs and enhancements',
+      '3. Click an activity to assign an agent',
+      '4. Create agents ($200) with random attributes',
+      '5. Upgrade agents ($100 per attribute)',
+      '6. Complete activities to earn money',
+      '7. Finish all activities to unlock new establishments'
+    ];
+    
+    let instrY = 115;
+    instructions.forEach(instruction => {
+      this.renderer.renderText(
+        instruction,
+        instructionsX, instrY,
+        colors.white,
+        '14px "Courier New"'
+      );
+      instrY += 25;
+    });
+    
+    // Tips section
+    this.renderer.renderText(
+      '💡 Tips:',
+      instructionsX, instrY + 15,
+      colors.success,
+      'bold 16px "Courier New"'
+    );
+    
+    const tips = [
+      '• Agents work faster with higher attributes',
+      '• Each agent can only work on one task at a time',
+      '• Match agent strengths to activity requirements',
+      '• Scroll with mouse wheel to see more items'
+    ];
+    
+    instrY += 50;
+    tips.forEach(tip => {
+      this.renderer.renderText(
+        tip,
+        instructionsX, instrY,
+        colors.gray,
+        '13px "Courier New"'
+      );
+      instrY += 22;
+    });
+    
     // Establishments section
     this.renderer.renderText(
       'Establishments:',
