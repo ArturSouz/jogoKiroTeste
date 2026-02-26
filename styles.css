@@ -1,0 +1,29 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0a0a0a;
+}
+
+#gameCanvas {
+    border: 2px solid #790ECB;
+    box-shadow: 0 0 20px rgba(121, 14, 203, 0.3);
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
